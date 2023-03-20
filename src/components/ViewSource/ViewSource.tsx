@@ -19,12 +19,16 @@ const ViewSource: React.FunctionComponent<moreProps> = (props) => {
 
 return (
   <React.Fragment>
-    {props.src.map((dataItem, index, array) => {
-      return (
-        <p>dataItem</p>
-      )
-    })
-    }
+    <h2>Text source</h2>
+    <code>
+      {props.src.map((dataItem, index, array) => {
+        return (
+          <p>{dataItem}</p>
+        )
+      })
+      }
+    </code>
+    
   </React.Fragment>
 );
 

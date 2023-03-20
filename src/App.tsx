@@ -21,14 +21,15 @@ const Header: React.FunctionComponent = () => {
     <div className={styles.header}>
       
         <h1>Editor testing</h1>
+        <hr />
         <h3>Page menu</h3>
         <h4 >
-          <Link to="/Home">Go home</Link>
+          <Link to="/Home">Editor (home page)</Link>
         </h4>
         <h4 >
-          <Link to="/TextVisualizer">Page 1</Link>
+          <Link to="/TextVisualizer">Text representation</Link>
         </h4>
-        
+        <hr></hr>
     </div>
 
   );
@@ -39,8 +40,9 @@ const App: React.FunctionComponent = () => {
       <Router>
 
         <Header />
+
         <Routes>
-          <Route path='/Home' element={EditableBlock} />
+          <Route path='/Home' element={<EditableBlock src={dummyPage} />} />
 
           <Route path='/TextVisualizer' element={<ViewSource src={dummyPage} />} />
 
@@ -49,10 +51,7 @@ const App: React.FunctionComponent = () => {
         </Routes>
 
       </Router>
-      <h3>Example editable block</h3>
-      
-      <h3>End of test</h3>
-      
+            
     </div>
     
   ); 
